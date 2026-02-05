@@ -1,7 +1,11 @@
 <template>
-  <UCard
+  <a
+    :href="link"
+    target="_blank"
+    rel="noopener noreferrer"
     class="
       group
+      block
       bg-black/70
       border border-blue-400/50
       rounded-2xl
@@ -43,10 +47,8 @@
       {{ text }}
     </p>
 
-    <!-- PULSANTE (SOLO DESKTOP) -->
-    <a
-      :href="link"
-      target="_blank"
+    <!-- PULSANTE (solo effetto hover su desktop) -->
+    <span
       class="
         hidden sm:inline-block
         mt-auto
@@ -58,18 +60,16 @@
         transition-all
         duration-300
         ease-out
-        hover:bg-blue-500
-        hover:text-white
-        hover:border-transparent
-        hover:shadow-md
-        hover:shadow-blue-500/50
         group-hover:bg-blue-500
         group-hover:text-white
+        group-hover:border-transparent
+        group-hover:shadow-md
+        group-hover:shadow-blue-500/50
       "
     >
       Apri
-    </a>
-  </UCard>
+    </span>
+  </a>
 </template>
 
 <script setup>
