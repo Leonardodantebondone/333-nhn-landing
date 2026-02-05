@@ -1,5 +1,5 @@
 <template>
-  <div class="relative overflow-hidden">
+  <div class="relative min-h-screen overflow-hidden">
 
     <!-- SFONDO DINAMICO DARK -->
     <div class="fixed inset-0 -z-20">
@@ -7,15 +7,32 @@
     </div>
 
     <!-- SFONDO HERO IMAGE -->
-    <div class="fixed inset-0 -z-10 overflow-hidden">
-      <img src="/hero.jpeg" alt="Hero background" class="w-full h-full object-cover object-center" />
+    <div class="fixed inset-0 -z-10">
+      <img
+        src="/hero.jpeg"
+        alt="Hero background"
+        class="w-full h-full object-cover object-center"
+      />
       <div class="absolute inset-0 bg-black/60"></div>
     </div>
 
-    <!-- HERO: solo logo centrato -->
-    <section class="relative z-10 h-[60vh] flex items-center justify-center text-center px-6 text-white">
+    <!-- HERO -->
+    <section
+      class="
+        relative
+        z-10
+        min-h-[60svh]
+        flex
+        items-center
+        justify-center
+        text-center
+        px-6
+        text-white
+      "
+    >
       <AppLogo />
     </section>
+
 
     <!-- SEZIONE PULSANTE + CARDS -->
     <section class="relative z-10 max-w-6xl mx-auto px-6 py-16 sm:py-20 flex flex-col items-center">
